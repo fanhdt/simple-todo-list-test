@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f7fb, #e9edf5);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #1f2430;
+    padding: 24px;
+}
+
+.card {
+    width: 100%;
+    max-width: 480px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(20, 24, 40, 0.08);
+    padding: 32px;
+}
+
+h1 {
+    margin: 0 0 4px;
+    font-size: 1.6rem;
+}
+
+.subtitle {
+    margin: 0 0 24px;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.todo-form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.todo-form input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #d7dae2;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+.todo-form input:focus {
+    outline: none;
+    border-color: #5b6ef5;
+}
+
+.todo-form button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #5b6ef5;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.todo-form button:hover {
+    background: #4756d6;
+}
+
+.todo-form button:disabled {
+    background: #a9b0e8;
+    cursor: not-allowed;
+}
+
+.status-message {
+    margin: 0 0 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    background: #fdecea;
+    color: #b3261e;
+}
+
+.status-message.info {
+    background: #eef1fd;
+    color: #3c4bd6;
+}
+
+.todo-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border: 1px solid #edeff4;
+    border-radius: 10px;
+    background: #fafbfd;
+}
+
+.todo-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.todo-item .todo-title {
+    flex: 1;
+    font-size: 0.95rem;
+    word-break: break-word;
+}
+
+.todo-item.completed .todo-title {
+    text-decoration: line-through;
+    color: #9aa0ac;
+}
+
+.todo-item button.delete-btn {
+    border: none;
+    background: transparent;
+    color: #b3261e;
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.todo-item button.delete-btn:hover {
+    background: #fdecea;
+}
+
+.empty-state {
+    text-align: center;
+    color: #9aa0ac;
+    font-size: 0.9rem;
+    padding: 16px 0;
+}
