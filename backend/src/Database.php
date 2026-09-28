@@ -1,13 +1,5 @@
 <?php
 
-/**
- * Database.php
- *
- * Bertanggung jawab untuk membuat koneksi PDO ke PostgreSQL.
- * Kredensial database diambil dari environment variables,
- * TIDAK pernah di-hardcode di dalam kode.
- */
-
 class Database
 {
     private static ?PDO $connection = null;

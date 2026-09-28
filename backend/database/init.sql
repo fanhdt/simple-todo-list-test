@@ -1,5 +1,3 @@
--- Skema database untuk aplikasi Todo List
--- Tabel ini otomatis dibuat saat container PostgreSQL pertama kali dijalankan
 
 CREATE TABLE IF NOT EXISTS todos (
     id SERIAL PRIMARY KEY,

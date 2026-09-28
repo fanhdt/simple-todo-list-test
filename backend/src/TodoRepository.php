@@ -1,13 +1,4 @@
 <?php
-
-/**
- * TodoRepository.php
- *
- * Bertanggung jawab untuk semua query ke tabel `todos`.
- * Semua query menggunakan prepared statement (parameter binding)
- * untuk mencegah SQL Injection.
- */
-
 class TodoRepository
 {
     private PDO $db;

@@ -1,16 +1,4 @@
 <?php
-
-/**
- * Router.php
- *
- * Router sederhana yang menangani:
- * - CORS (termasuk preflight OPTIONS)
- * - Parsing method + path
- * - Validasi request
- * - Memanggil TodoRepository
- * - Mengirim response JSON dengan HTTP status code yang sesuai
- */
-
 class Router
 {
     private TodoRepository $repository;
