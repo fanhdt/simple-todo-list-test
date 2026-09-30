@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
     <meta charset="UTF-8" />
@@ -7,27 +8,90 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <main class="card">
-        <h1>Todo List</h1>
-        <p class="subtitle">Frontend Vanilla JS &rarr; RESTful API (PHP) &rarr; PostgreSQL</p>
+    <main class="container">
 
-        <form id="todo-form" class="todo-form">
-            <input
-                type="text"
-                id="todo-input"
-                placeholder="Tulis todo baru..."
-                maxlength="255"
-                required
-            />
-            <button type="submit">Tambah</button>
-        </form>
+
+    <!-- Header -->
+    <header class="header">
+        <div>
+            <span class="eyebrow">RESTful API Demo</span>
+            <h1>Todo List</h1>
+            <p>
+                Data dikelola melalui aplikasi Flutter dan ditampilkan
+                secara read-only di sini.
+            </p>
+        </div>
+
+        <div class="api-status">
+            <span class="status-dot"></span>
+            <span>API Connected</span>
+        </div>
+    </header>
+
+    <!-- Info -->
+    <section class="info-card">
+        <div class="info-icon">↔</div>
+
+        <div>
+            <strong>Read-only mode</strong>
+            <p>
+                Halaman ini hanya mengambil dan menampilkan data dari
+                RESTful API. Penambahan, perubahan, dan penghapusan todo
+                dilakukan melalui aplikasi Flutter.
+            </p>
+        </div>
+    </section>
+
+    <!-- Todo Section -->
+    <section class="todo-card">
+
+        <div class="section-header">
+            <div>
+                <h2>Daftar Todo</h2>
+                <p id="todo-count">Memuat data...</p>
+            </div>
+
+            <button
+                id="refresh-button"
+                class="refresh-button"
+                type="button"
+                title="Refresh data"
+            >
+                ↻
+                <span>Refresh</span>
+            </button>
+        </div>
 
         <p id="status-message" class="status-message" hidden></p>
 
         <ul id="todo-list" class="todo-list"></ul>
-    </main>
 
-    <script src="api.js"></script>
-    <script src="app.js"></script>
+        <!-- Empty State -->
+        <div id="empty-state" class="empty-state" hidden>
+            <div class="empty-icon">✓</div>
+            <h3>Belum ada todo</h3>
+            <p>
+                Tambahkan todo melalui aplikasi Flutter untuk
+                menampilkannya di sini.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <span>Vanilla JS</span>
+        <span>•</span>
+        <span>REST API</span>
+        <span>•</span>
+        <span>PHP + PostgreSQL</span>
+    </footer>
+
+</main>
+
+<script src="api.js"></script>
+<script src="app.js"></script>
+
+
 </body>
 </html>
